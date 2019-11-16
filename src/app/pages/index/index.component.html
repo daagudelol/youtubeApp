@@ -1,0 +1,15 @@
+<p>index works!</p>
+<div fxLayout="row wrap" fxLayoutGap="5px" *ngIf="videos.length > 0">
+    <mat-card fxFlex class="example-card" fxFlex="22" *ngFor="let video of videos">
+
+        <img mat-card-image [src]="video.thumbnails.high.url" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+            <mat-card-subtitle>{{video.title}}</mat-card-subtitle>
+
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary">VER VIDEO </button>
+
+        </mat-card-actions>
+    </mat-card>
+</div>

@@ -20,7 +20,7 @@ export class YoutubeService {
     let params = new HttpParams().set('part', 'snippet').set('maxResults', '10').set('playlistId', this.playList ).set('key', this.apiKey);
 
     return this.http.get(url, { params }).pipe(map((res: any) =>{
-        console.log(res)
+        //console.log(res)
         this.nextPageTocken = res.nextPageToken;
         let videos:any[]=[];
         for(let video of res.items){

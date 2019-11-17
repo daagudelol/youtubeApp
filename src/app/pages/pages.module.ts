@@ -11,11 +11,21 @@ import { IndexComponent } from './index/index.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { YoutubeService } from '../services/youtube.service';
+import { VideoComponent } from './index/video.component';
+import { MaterialModule } from '../material.module';
+import { FormsModule } from '@angular/forms';
+import { VideoYoutubePipe } from '../pipes/video-youtube.pipe';
 
 
 
 @NgModule({
-  declarations: [DashboardComponent, IndexComponent, PageNotFoundComponent],
+  declarations: [
+    DashboardComponent,
+    IndexComponent,
+    PageNotFoundComponent,
+    VideoComponent,
+    VideoYoutubePipe
+  ],
   imports: [
     CommonModule,
     MatGridListModule,
@@ -24,10 +34,15 @@ import { YoutubeService } from '../services/youtube.service';
     MatIconModule,
     MatButtonModule,
     LayoutModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MaterialModule,
+    FormsModule
   ],
   exports:[
 
+  ],
+  entryComponents: [
+    VideoComponent
   ],
   providers:[
     YoutubeService

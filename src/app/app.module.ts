@@ -12,7 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,7 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     MaterialModule,
     FlexLayoutModule,
     SharedModule,
-    PagesModule
+    PagesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

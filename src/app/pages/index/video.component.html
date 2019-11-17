@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>{{data.name}}</h1>
+<div mat-dialog-content>
+
+
+    <iframe width="100%" height="315" [src]=" data.idVideo | videoYoutube" frameborder="0" allowfullscreen></iframe>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cerrar</button>
+
+</div>
